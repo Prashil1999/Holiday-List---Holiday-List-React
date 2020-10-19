@@ -1,16 +1,27 @@
-import React, {Component, useState} from "react";
-import '../styles/App.css';
+import React, { Component, useState } from "react";
+import "../styles/App.css";
 
 class App extends Component {
-    render() {
+  render() {
+    let cities = [
+      { city: "Goa", country: "India" },
+      { city: "Amsterdam", country: "Netherlands" },
+      { city: "New York", country: "USA" },
+      { city: "Darjeeling", country: "India" },
+      { city: "Tokyo", country: "Japan" },
+      { city: "Lonavala", country: "India" }
+    ];
 
-        return(
-           <>
-//write your code here
-	</>
-        )
-    }
+    return (
+      <>
+        <ol>
+          {cities.map((city) =>
+            city.country === "India" ? <li>{city}</li> : null
+          )}
+        </ol>
+      </>
+    );
+  }
 }
-
 
 export default App;
