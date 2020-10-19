@@ -15,8 +15,10 @@ class App extends Component {
     return (
       <>
         <ol>
-          {cities.map((city) =>
-            city.country === "India" ? <li>{city}</li> : null
+          {cities.map((city, index) =>
+            city.country === "India" ? (
+              <li key={"location" + index}>{city}</li>
+            ) : null
           )}
         </ol>
       </>
